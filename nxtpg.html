@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Payment portal</title>
+        <link rel="stylesheet" href="sparks.css">
+        <script src="sparks.js">
+        </script>
+    </head>
+    <body>
+        <!--nav bar-->
+        <ul>
+            <li><a href='./sparks.html'>Home</a></li>
+            <li class="active"><a href='./nxtpg.html'>View All Customers</a></li>
+        </ul>
+        <!--content-->
+        <p class="Balance">NAME : RENUGHA<br><br>NET BALANCE : $<span id="myBalance">10000</span></p>
+        <button class="button-1"  onclick="openForm()">SEND MONEY</button>
+        <p></p>
+        <button class="button-2" id="myBtn" type="button" onclick="transaction()" >TRANSACTION HISTORY</button> 
+        <!--form to send money-->
+        <div class="form-popup" id="myForm">
+            <form action="" class="form-container">
+                <p id="heading"><b>Enter The Details</b></p>
+                <label for="email">Email</label>
+                <input type="text" id="mailofreceiver" placeholder="Enter Email" name="email" required>
+                <label for="text">Amount</label>
+                <input type="text" id="amttobesent" placeholder="Enter Amount" required>
+                <button type="button" class="btn" onclick="sendMoney()"><b>Send Money</b></button>
+                <button type="button" class="btn cancel" onclick="closeForm()"><b>Close</b></button>
+            </form>
+        </div>
+        <!--transaction history-->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <p ><b>Transaction History</b></p>
+                <span class="close">&times;</span>
+                <ol id="transaction-history-body"></ol>
+            </div>
+        </div>
+        <!--customers info-->
+        <table>
+            <tr>
+                <th>Sl. No.</th>
+                <th>Name</th>
+                <th>Mail Address</th>
+                <th>Current Balance(in $)</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Divya</td>
+                <td>divya@gmail.com</td>
+                <td>
+                    <p id="divya@gmail.com">2000</p>
+                </td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Dhansika</td>
+                <td>dhansika@gmail.com</td>
+                <td >
+                    <p id="dhansika@gmail.com">4000</p>
+                </td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Varshini</td>
+                <td>varshini@gmail.com</td>
+                <td >
+                    <p id="varshini@gmail.com">1000</p>
+                </td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Ramya</td>
+                <td>ramya@gmail.com</td>
+                <td >
+                    <p id="ramya@gmail.com">3200</p>
+                </td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Gowtham</td>
+                <td>gowtham@gmail.com</td>
+                <td >
+                    <p id="gowtham@gmail.com">4000</p>
+                </td>
+
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>Rahul</td>
+                <td>rahul@gmail.com</td>
+                <td>
+                    <p id="rahul@gmail.com">2900</p>
+                </td>
+
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td>Roshini</td>
+                <td>roshini@gmail.com</td>
+                <td>
+                    <p id="roshini@gmail.com">5800</p>
+                </td>
+
+            </tr>
+            <tr>
+                <td>8.</td>
+                <td>Kamala</td>
+                <td>kamala@gmail.com</td>
+                <td>
+                    <p id="kamala@gmail.com">3800</p>
+                </td>
+
+            </tr>
+            <tr>
+                <td>9.</td>
+                <td>Sarah</td>
+                <td>sarah@gmail.com</td>
+                <td>
+                    <p id="sarah@gmail.com">7200</p>
+                </td>
+            </tr>
+            <tr>
+                <td>10.</td>
+                <td>Sarath</td>
+                <td>sarath@gmail.com</td>
+                <td>
+                    <p id="sarath@gmail.com">4000</p>
+                </td>
+            </tr>
+        </table>   
+    </body>
+</html>
